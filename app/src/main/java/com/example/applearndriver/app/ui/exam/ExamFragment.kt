@@ -1,27 +1,29 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam
+package com.example.applearndriver.app.ui.exam
 
 import android.app.AlertDialog
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
-import com.nguyennhatminh614.motobikedriverlicenseapp.R
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.ExamState
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.LicenseType
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.findCreateExamRuleByLicenseTypeString
-import com.nguyennhatminh614.motobikedriverlicenseapp.databinding.FragmentExamBinding
+import com.example.applearndriver.R
+import com.example.applearndriver.app.ui.main.MainActivity
 import com.example.applearndriver.app.ui.exam.infodialog.ExamInfoDialog
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.mainscreen.MainActivity
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseFragment
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.showToast
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import com.example.applearndriver.base.BaseFragment
+import com.example.applearndriver.constant.AppConstant
+import com.example.applearndriver.data.model.ExamState
+import com.example.applearndriver.data.model.LicenseType
+import com.example.applearndriver.data.model.findCreateExamRuleByLicenseTypeString
+import com.example.applearndriver.databinding.FragmentExamBinding
+import com.example.applearndriver.utils.extensions.showToast
+import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ExamFragment : BaseFragment<FragmentExamBinding>(FragmentExamBinding::inflate) {
 
-    override val viewModel by sharedViewModel<ExamViewModel>()
+    override val viewModel by activityViewModels<ExamViewModel>()
 
     private val examAdapter by lazy { ExamAdapter() }
 

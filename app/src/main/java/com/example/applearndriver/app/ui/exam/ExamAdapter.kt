@@ -3,18 +3,18 @@ package com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
-import com.nguyennhatminh614.motobikedriverlicenseapp.R
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.Exam
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.ExamState
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.findCreateExamRuleByLicenseTypeString
-import com.nguyennhatminh614.motobikedriverlicenseapp.databinding.ItemExamListLayoutBinding
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.OnClickItem
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.OnClickItemPosition
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseRecyclerViewAdapter
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseViewHolder
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.getResourceColor
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.toDateTimeDetail
+import com.example.applearndriver.R
+import com.example.applearndriver.base.BaseRecyclerViewAdapter
+import com.example.applearndriver.base.BaseViewHolder
+import com.example.applearndriver.constant.AppConstant
+import com.example.applearndriver.data.model.Exam
+import com.example.applearndriver.data.model.ExamState
+import com.example.applearndriver.data.model.findCreateExamRuleByLicenseTypeString
+import com.example.applearndriver.databinding.ItemExamListLayoutBinding
+import com.example.applearndriver.utils.OnClickItem
+import com.example.applearndriver.utils.OnClickItemPosition
+import com.example.applearndriver.utils.extensions.getResourceColor
+import com.example.applearndriver.utils.extensions.toDateTimeDetail
 
 class ExamAdapter :
     BaseRecyclerViewAdapter<Exam, ItemExamListLayoutBinding, ExamAdapter.ViewHolder>(Exam.getDiffCallBack()) {

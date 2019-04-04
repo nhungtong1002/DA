@@ -1,18 +1,20 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.watchhistory
+package com.example.applearndriver.app.ui.exam.watchhistory
 
 import androidx.core.view.isVisible
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.Exam
-import com.nguyennhatminh614.motobikedriverlicenseapp.databinding.FragmentExamWatchHistoryLayoutBinding
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamViewModel
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.mainscreen.MainActivity
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseFragment
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import androidx.fragment.app.activityViewModels
+import com.example.applearndriver.app.ui.main.MainActivity
+import com.example.applearndriver.app.ui.exam.ExamViewModel
+import com.example.applearndriver.base.BaseFragment
+import com.example.applearndriver.constant.AppConstant
+import com.example.applearndriver.data.model.Exam
+import com.example.applearndriver.databinding.FragmentExamWatchHistoryLayoutBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ExamWatchHistoryFragment
     : BaseFragment<FragmentExamWatchHistoryLayoutBinding>(FragmentExamWatchHistoryLayoutBinding::inflate) {
 
-    override val viewModel by sharedViewModel<ExamViewModel>()
+    override val viewModel by activityViewModels<ExamViewModel>()
 
     private val examWatchHistoryAdapter by lazy { ExamWatchHistoryAdapter() }
 

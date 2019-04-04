@@ -1,4 +1,4 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.watchhistory
+package com.example.applearndriver.app.ui.exam.watchhistory
 
 import android.text.Spannable
 import android.text.SpannableString
@@ -6,14 +6,14 @@ import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 import android.view.ViewGroup
 import androidx.core.text.bold
-import com.nguyennhatminh614.motobikedriverlicenseapp.R
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.ExamHistory
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.ExamState
-import com.nguyennhatminh614.motobikedriverlicenseapp.databinding.ItemExamResultHistoryBinding
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.OnClickItem
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseRecyclerViewAdapter
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.base.BaseViewHolder
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.getResourceColor
+import com.example.applearndriver.R
+import com.example.applearndriver.base.BaseRecyclerViewAdapter
+import com.example.applearndriver.base.BaseViewHolder
+import com.example.applearndriver.data.model.ExamHistory
+import com.example.applearndriver.data.model.ExamState
+import com.example.applearndriver.databinding.ItemExamResultHistoryBinding
+import com.example.applearndriver.utils.OnClickItem
+import com.example.applearndriver.utils.extensions.getResourceColor
 
 class ExamWatchHistoryAdapter :
     BaseRecyclerViewAdapter<ExamHistory, ItemExamResultHistoryBinding, ExamWatchHistoryAdapter.ViewHolder>(ExamHistory.getDiffCallBack()) {

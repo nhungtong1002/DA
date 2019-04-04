@@ -1,20 +1,44 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam
+package com.example.applearndriver.app.ui.exam
 
 import android.content.SharedPreferences
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.applearndriver.base.BaseViewModel
+import com.example.applearndriver.constant.AppConstant
+import com.example.applearndriver.constant.AppConstant.FIRST_INDEX
+import com.example.applearndriver.data.model.Exam
+import com.example.applearndriver.data.model.ExamHistory
+import com.example.applearndriver.data.model.ExamState
 import com.example.applearndriver.data.model.NewQuestion
+import com.example.applearndriver.data.model.QuestionOptions
+import com.example.applearndriver.data.model.QuestionType
+import com.example.applearndriver.data.model.StateQuestionOption
+import com.example.applearndriver.data.model.WrongAnswer
+import com.example.applearndriver.data.model.findCreateExamRuleByLicenseType
+import com.example.applearndriver.data.model.findCreateExamRuleByLicenseTypeString
+import com.example.applearndriver.data.model.getAllLowerQuestionList
+import com.example.applearndriver.data.repository.ExamRepository
+import com.example.applearndriver.data.repository.WrongAnswerRepository
+import com.example.applearndriver.utils.CountDownInstance
+import com.example.applearndriver.utils.extensions.convertMinutesToMillisecond
+import com.example.applearndriver.utils.extensions.getCurrentLicenseType
+import com.example.applearndriver.utils.extensions.isCurrentDarkMode
+import com.example.applearndriver.utils.generateEmptyQuestionStateList
+import com.example.applearndriver.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.provideEmptyQuestionOption
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ExamViewModel(
+@HiltViewModel
+class ExamViewModel @Inject constructor(
     private val examRepository: ExamRepository,
     private val wrongAnswerRepository: WrongAnswerRepository,
-    private val sharedPreferences: SharedPreferences,
-) : BaseViewModel() {
+    sharedPreferences: SharedPreferences,
+) : BaseViewModel(sharedPreferences) {
 
     private val _listExam = MutableLiveData<MutableList<Exam>>()
     val listExam: LiveData<MutableList<Exam>>
@@ -35,6 +59,9 @@ class ExamViewModel(
     private val _currentTimeCountDown = MutableLiveData<String>()
     val currentTimeCountDown: LiveData<String>
         get() = _currentTimeCountDown
+
+    val isDarkModeOn: Boolean
+        get() = sharedPreferences.isCurrentDarkMode()
 
     init {
         launchTask {

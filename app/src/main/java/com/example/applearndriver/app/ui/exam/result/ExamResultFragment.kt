@@ -7,7 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearSmoothScroller
 import com.example.applearndriver.R
-import com.example.applearndriver.app.ui.MainActivity
+import com.example.applearndriver.app.ui.main.MainActivity
 import com.example.applearndriver.base.BaseFragment
 import com.example.applearndriver.constant.AppConstant
 import com.example.applearndriver.data.model.Exam
@@ -19,12 +19,12 @@ import com.example.applearndriver.databinding.FragmentExamResultBinding
 import com.example.applearndriver.utils.extensions.getCurrentThemeBackgroundColor
 import com.example.applearndriver.utils.extensions.getSelectedColor
 import com.example.applearndriver.utils.extensions.toDateTimeMMSS
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamFragment
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamViewModel
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.isCurrentDarkMode
+import com.example.applearndriver.app.ui.exam.ExamViewModel
+import com.example.applearndriver.app.ui.exam.ExamFragment
+import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.migration.CustomInjection.inject
 
-
+@AndroidEntryPoint
 class ExamResultFragment
     : BaseFragment<FragmentExamResultBinding>(FragmentExamResultBinding::inflate) {
 
@@ -74,9 +74,8 @@ class ExamResultFragment
             }
         }
         viewBinding.apply {
-            val isDarkModeOn = inject<SharedPreferences>().value.isCurrentDarkMode()
 
-            if (isDarkModeOn) {
+            if (viewModel.isDarkModeOn) {
                 layoutExamResult.setBackgroundColor(getCurrentThemeBackgroundColor())
             } else {
                 layoutExamResult.setBackgroundColor(getSelectedColor(R.color.background_color))
