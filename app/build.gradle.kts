@@ -62,12 +62,14 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(platform(libs.com.google.firebase.firebase.bom))
+    implementation(libs.firebase.analytics)
 
     implementation("com.google.firebase:firebase-firestore:24.4.0")
     implementation("com.google.firebase:firebase-firestore-ktx:24.4.0")
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation ("com.github.bumptech.glide:glide:4.14.2")
 }
+
