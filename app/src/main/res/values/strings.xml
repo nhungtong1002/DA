@@ -1,3 +1,69 @@
 <resources>
-    <string name="app_name">SampleArchitecture</string>
+    <string name="app_name">Ứng dung ôn thi GPLX</string>
+    <string name="text_temp_loading_splash_screen">Đang tải.</string>
+    <string name="title_activity_main">Ôn thi GPLX</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Ứng dụng ôn thi GLPX</string>
+    <string name="nav_header_subtitle">Nguyễn Nhật Minh - 2019600285</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="text_action_info">Info</string>
+    <string name="text_exam_fragment_title">Chọn đề thi thử</string>
+    <string name="text_study_fragment_title">Học lý thuyết</string>
+    <string name="text_tips_high_score_fragment_title">Mẹo thi điểm cao</string>
+    <string name="text_wrong_answer_fragment_title">Các câu hay sai</string>
+    <string name="text_traffic_sign_fragment_title">Biển báo giao thông</string>
+    <string name="text_settings_fragment_title">Cài đặt</string>
+    <string name="text_button_do_exam">Làm bài</string>
+    <string name="text_exam_description">25 câu hỏi / 19 phút</string>
+    <string name="text_exam_title">Đề số 1</string>
+    <string name="text_temp_long_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum...</string>
+    <string name="text_tips_high_score_title">Mẹo số 1</string>
+    <string name="text_temp_current_questions">Câu 6/25</string>
+    <string name="text_example_questions">Câu hỏi: Người điều khiển phương tiện giao thông đường bộ mà trong cơ thể có chất ma túy có bị nghiêm cấm hay không?</string>
+    <string name="text_title_explain">Giải thích:</string>
+    <string name="text_temp_position">1</string>
+    <string name="text_default_detail_exam">Màn hình thi</string>
+    <string name="text_temp_question_category">Khái niệm và quy tắc</string>
+    <string name="text_temp_numbers_of_questions">60 Câu</string>
+    <string name="text_temp_numbers_of_selected_question">3/70</string>
+    <string name="text_temp_nav_detail_study">Màn hình ôn tập</string>
+    <string name="text_temp_nav_instruction">Màn hình hướng dẫn thi</string>
+    <string name="button_finish_exam_text">Kết thúc</string>
+    <string name="current_time_exam_text">19:00</string>
+    <string name="text_empty_data">Không có dữ liệu!!</string>
+    <string name="text_dark_mode">Chế độ màn hình tối:</string>
+    <string name="temp_traffic_sign_title">Temp traffic sign title</string>
+    <string name="button_reset">Reset</string>
+    <string name="text_instruction_title">Hướng dẫn</string>
+    <string name="text_instruction_theory_title">Thi lý thuyết</string>
+    <string name="text_instruction_practice_title">Thi thực hành</string>
+    <string name="text_instruction_theory_content">Phần thi lý thuyết bao gồm 25 câu hỏi và được chia làm 3 phần: Luật Giao Thông, Biển Báo và Sa Hình. Thời gian làm bài ở phần này là 19 phút, Trong đó, để có thể vượt qua bài thi, bạn cần đúng 21/25 câu hỏi và câu được phép sai ở bất kỳ câu hỏi điểm liệt nào.</string>
+    <string name="text_instruction_practice_content">
+\n\n- <b>Phần 1:</b> Đường hình số 8: Bạn cùng xe bước vào vạch “Xuất phát” sau đó bắt đầu điều khiển xe vào hình số 8. Trước tiên, rẽ phải và đi một vòng số 8. Sau đó, điều khiển xe đi theo hướng ra của vòng số 8 và tiếp tục bài thi tiếp theo.
+\n\n- <b>Phần 2:</b> Đường thẳng: Phần thi này được cho là dễ nhất trong bài thực hành. Ở đây, bạn chỉ cần để xe chạy thẳng đến hết quãng đường được vẽ theo đường thẳng. Hết bài thi này, bạn vòng xe rẽ phải và bước vào bài thi tiếp theo.
+\n\n- <b>Phần 3:</b> Đường vạch cản: ở phần này, bạn cần cho xe tránh những vạch cản được vẽ màu trắng dưới đường (đi theo hình zíc zắc, cũng có thể hiểu là đánh võng). Hết các vạch cản, bạn rẽ trái để vào phần thi cuối cùng.
+\n\n- <b>Phần 4:</b> Đường gồ ghề: Vì gờ được làm khá cao, do đó bạn cần giữ vững xe và chắc tay lái. Đồng thời điều tiết tốc độ cho phù hợp không đi quá nhanh và cũng không đi quá chậm. Khi chạy hết phần đường gồ ghề, bạn chạy về nơi xuất phát và kết thúc bài thi của mình.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_license_type">Hạng A1</string>
+    <string name="text_change_license_type">Thay đổi hạng bằng</string>
+    <string name="text_exam_result">Kết quả thi</string>
+    <string name="reset_exam">Thi lại</string>
+    <string name="text_exam_info_guide"><b>Lưu ý:</b> Nếu trả lời sai một câu điểm liệt bạn sẽ thi trượt bài thi đó</string>
+    <string name="text_exam_info_duration"><b>Thời gian làm bài:</b> %1$d phút</string>
+    <string name="text_minimum_question_to_pass_exam_info"><b>Số câu đúng tối thiểu:</b> %1$d câu</string>
+    <string name="text_title_exam_info">Hướng dẫn làm bài thi hạng %1$s</string>
+    <string name="text_numbers_of_question_exam_info"><b>Tổng số câu:</b> %1$d câu</string>
+    <string name="text_current_question_loading">Đang tải...</string>
+    <string name="text_watch_exam_history">Xem lịch sử</string>
+    <string name="nav_watch_history_title">Xem lịch sử thi</string>
+    <string name="text_temp_title_instruction"><b>HƯỚNG DẪN THI THỰC HÀNH XE MÁY (4 PHẦN):</b>
+        \n\nKhi giám khảo gọi tên nhận xe, bạn lưu ý số xe mình chuẩn bị nhận để thi. Khi hệ thống đọc đến số xe của bạn thì bạn bắt đầu xuất phát. Phải hoàn thành đúng và đủ 04 phần thi dưới đây:</string>
 </resources>
