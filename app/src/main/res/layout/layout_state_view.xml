@@ -73,7 +73,7 @@
         android:id="@+id/progressLoading"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:indeterminateTint="@color/color_primary"
+        android:indeterminateTint="@color/primary_color"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

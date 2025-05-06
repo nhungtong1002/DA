@@ -3,7 +3,7 @@ package com.example.applearndriver.data.repository
 import com.example.applearndriver.data.datasource.IStudyDataSource
 import com.example.applearndriver.data.model.NewQuestion
 import com.example.applearndriver.data.model.StudyCategory
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 
 class StudyRepository(
     private val local: IStudyDataSource.Local,

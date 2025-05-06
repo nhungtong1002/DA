@@ -1,6 +1,6 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces
+package com.example.applearndriver.utils.interfaces
 
-import com.nguyennhatminh614.motobikedriverlicenseapp.data.model.QuestionOptions
+import com.example.applearndriver.data.model.QuestionOptions
 
 interface IBottomSheetListener {
     fun onNextQuestion(listener: IResponseListener<Int>)

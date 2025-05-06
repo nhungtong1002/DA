@@ -2,6 +2,7 @@ package com.example.applearndriver.app.ui.splash
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.applearndriver.base.BaseViewModel
 import com.example.applearndriver.constant.AppConstant
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay

@@ -4,7 +4,7 @@ import com.example.applearndriver.constant.AppConstant
 import com.example.applearndriver.data.datasource.IWrongAnswerDataSource
 import com.example.applearndriver.data.model.NewQuestion
 import com.google.firebase.firestore.FirebaseFirestore
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 
 class WrongAnswerRemoteDataSource(
     private val fireStoreDB: FirebaseFirestore,

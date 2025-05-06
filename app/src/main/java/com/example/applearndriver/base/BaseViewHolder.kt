@@ -3,6 +3,9 @@ package com.example.applearndriver.base
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 
-open class BaseViewHolder<out T : ViewBinding>(val binding: T) : RecyclerView.ViewHolder(binding.root) {
-    val context get() = itemView.context
+abstract class BaseViewHolder<T, VB : ViewBinding>(
+    open val binding: VB,
+) : RecyclerView.ViewHolder(binding.root) {
+
+    abstract fun onBindData(data: T)
 }

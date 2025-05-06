@@ -2,8 +2,8 @@ package com.example.applearndriver.utils
 
 import android.os.CountDownTimer
 import com.example.applearndriver.constant.AppConstant
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.convertMinutesToMillisecond
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.toDateTimeMMSS
+import com.example.applearndriver.utils.extensions.convertMinutesToMillisecond
+import com.example.applearndriver.utils.extensions.toDateTimeMMSS
 
 object CountDownInstance {
     private const val REQUESTED_TICK_INTERVAL = 1000L

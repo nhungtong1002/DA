@@ -3,7 +3,7 @@ package com.example.applearndriver.data.repository
 import com.example.applearndriver.data.datasource.IWrongAnswerDataSource
 import com.example.applearndriver.data.model.NewQuestion
 import com.example.applearndriver.data.model.WrongAnswer
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 
 class WrongAnswerRepository(
     private val local: IWrongAnswerDataSource.Local,

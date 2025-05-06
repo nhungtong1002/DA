@@ -1,4 +1,4 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 
 fun String?.processEndline(): String {
     if (this == null) {

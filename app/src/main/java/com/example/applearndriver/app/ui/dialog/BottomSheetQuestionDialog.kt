@@ -7,14 +7,14 @@ import android.view.WindowManager
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import com.example.applearndriver.app.ui.adapter.BottomSheetQuestionListAdapter
+import com.example.applearndriver.app.ui.appadapter.BottomSheetQuestionListAdapter
 import com.example.applearndriver.base.BaseDialogBinding
 import com.example.applearndriver.data.model.QuestionOptions
 import com.example.applearndriver.databinding.DialogBottomSheetQuestionsListBinding
 import com.example.applearndriver.utils.CountDownInstance
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IBottomSheetListener
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IBottomSheetListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

@@ -1,7 +1,7 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant.PATTERN_DETAIL_TIME
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant.PATTERN_TIME
+import com.example.applearndriver.constant.AppConstant.PATTERN_DETAIL_TIME
+import com.example.applearndriver.constant.AppConstant.PATTERN_TIME
 import java.util.concurrent.TimeUnit
 
 fun Long.convertMinutesToMillisecond()

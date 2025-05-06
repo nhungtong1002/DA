@@ -1,4 +1,4 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces
+package com.example.applearndriver.utils.interfaces
 
 interface IResponseListener<T> {
     fun onSuccess(data: T)

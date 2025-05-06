@@ -3,7 +3,7 @@ package com.example.applearndriver.data.repository
 import com.example.applearndriver.data.datasource.IExamDataSource
 import com.example.applearndriver.data.model.Exam
 import com.example.applearndriver.data.model.NewQuestion
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 
 class ExamRepository(
     private val local: IExamDataSource.Local,

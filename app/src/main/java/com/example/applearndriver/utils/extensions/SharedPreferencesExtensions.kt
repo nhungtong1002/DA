@@ -1,8 +1,8 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 
 import android.content.SharedPreferences
+import com.example.applearndriver.constant.AppConstant
 import com.example.applearndriver.data.model.LicenseType
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.constant.AppConstant
 
 fun SharedPreferences.setCurrentLicenseType(currentLicenseType: String) {
     this.edit().putString(AppConstant.CURRENT_LICENSE_TYPE, currentLicenseType).apply()

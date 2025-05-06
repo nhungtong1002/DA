@@ -66,12 +66,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(platform(libs.com.google.firebase.firebase.bom))
     implementation(libs.firebase.analytics)
-
     implementation("com.google.firebase:firebase-firestore:24.4.0")
     implementation("com.google.firebase:firebase-firestore-ktx:24.4.0")
-
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.10.1")
     implementation ("com.github.bumptech.glide:glide:4.14.2")
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation ("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 }
 

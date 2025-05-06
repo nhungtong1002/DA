@@ -1,2 +1,2 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 

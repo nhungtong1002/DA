@@ -2,7 +2,7 @@ package com.example.applearndriver.data.repository
 
 import com.example.applearndriver.data.datasource.ITipsHighScoreDataSource
 import com.example.applearndriver.data.model.TipsHighScore
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.interfaces.IResponseListener
+import com.example.applearndriver.utils.interfaces.IResponseListener
 
 class TipsHighScoreRepository(
     private val remote: ITipsHighScoreDataSource.Remote,

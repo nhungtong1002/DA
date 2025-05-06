@@ -1,7 +1,8 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 
 import android.util.TypedValue
 import androidx.viewbinding.ViewBinding
+import com.example.applearndriver.utils.extensions.getResourceColor
 
 fun ViewBinding.getCurrentThemeTextColor() : Int {
     val typedValue = TypedValue()

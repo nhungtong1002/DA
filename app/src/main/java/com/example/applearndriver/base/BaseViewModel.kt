@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions.convertSecondToMillisecond
+import com.example.applearndriver.utils.extensions.convertSecondToMillisecond
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

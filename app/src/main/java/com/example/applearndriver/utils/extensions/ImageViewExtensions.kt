@@ -1,13 +1,12 @@
-package com.nguyennhatminh614.motobikedriverlicenseapp.utils.extensions
+package com.example.applearndriver.utils.extensions
 
 import android.content.Context
 import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
-import com.nguyennhatminh614.motobikedriverlicenseapp.R
+import com.example.applearndriver.R
 
 fun ImageView.loadGlideImageFromUrl(context: Context?, urlString: String) {
 

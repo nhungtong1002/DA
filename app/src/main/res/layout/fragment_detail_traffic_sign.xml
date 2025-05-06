@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_traffic_sign"
+        android:layout_width="@dimen/fill_constraint"
+        android:layout_height="@dimen/fill_constraint"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_caution"/>
+
+    <TextView
+        android:id="@+id/text_id_traffic_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="P.101"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_traffic_sign" />
+
+    <TextView
+        android:id="@+id/text_title_traffic_sign"
+        android:layout_width="@dimen/fill_constraint"
+        android:layout_height="wrap_content"
+        android:text="Biển báo đường cấm tất cả các loại xe cơ giới kể cả mô tô 3 bánh có thùng đi qua, trừ xe mô tô 2 bánh, xe gắn máy (kể cả xe máy điện) và các xe được ưu tiên theo Luật Giao thông đường bộ."
+        app:layout_constraintTop_toBottomOf="@id/text_id_traffic_sign"
+        app:layout_constraintStart_toStartOf="@id/text_id_traffic_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_15"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_description_traffic_sign"
+        android:layout_width="@dimen/fill_constraint"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        app:layout_constraintTop_toBottomOf="@id/text_title_traffic_sign"
+        app:layout_constraintStart_toStartOf="@id/text_title_traffic_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/text_temp_long_text"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
