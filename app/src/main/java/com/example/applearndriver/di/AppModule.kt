@@ -1,7 +1,7 @@
 package com.example.applearndriver.di
 
 import android.content.Context
-import com.example.applearndriver.utils.network.InternetConnection
+import android.content.SharedPreferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,11 +11,11 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NetworkModule {
+class AppModule {
 
     @Provides
     @Singleton
-    fun provideNetworkObserver(@ApplicationContext context: Context): InternetConnection {
-        return InternetConnection(context)
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
     }
 }

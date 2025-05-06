@@ -72,5 +72,6 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.14.2")
     implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation ("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    implementation ("androidx.webkit:webkit:1.4.0")
 }
 

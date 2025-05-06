@@ -1,5 +1,6 @@
 package com.example.applearndriver.app.ui.splash
 
+import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.applearndriver.base.BaseViewModel
@@ -11,7 +12,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SplashViewModel @Inject constructor() : BaseViewModel() {
+class SplashViewModel @Inject constructor(sharedPreferences: SharedPreferences) : BaseViewModel(
+    sharedPreferences
+) {
     private val _loadingText = MutableLiveData<String>()
     val loadingText: MutableLiveData<String>
         get() = _loadingText

@@ -1,16 +1,17 @@
 package com.example.applearndriver.app.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.applearndriver.app.ui.MainActivity
+import com.example.applearndriver.app.ui.main.MainActivity
 import com.example.applearndriver.base.BindingActivity
 import com.example.applearndriver.databinding.ActivitySplashBinding
-import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
-@HiltViewModel
+@AndroidEntryPoint
 class SplashActivity : BindingActivity<ActivitySplashBinding>() {
     override fun inflateBinding(layoutInflater: LayoutInflater): ActivitySplashBinding {
         return ActivitySplashBinding.inflate(layoutInflater)
@@ -39,7 +40,7 @@ class SplashActivity : BindingActivity<ActivitySplashBinding>() {
             }
 
             viewModel.isLoadingDone.observe(this@SplashActivity) {
-                MainActivity.start(this@SplashActivity)
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             }
         }
     }

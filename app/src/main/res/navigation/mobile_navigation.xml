@@ -3,4 +3,104 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mobile_navigation">
 
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_exam"
+        android:name="com.example.applearndriver.app.ui.exam.ExamFragment"
+        android:label="@string/text_exam_fragment_title"
+        tools:layout="@layout/fragment_exam">
+        <action
+            android:id="@+id/action_nav_exam_to_nav_detail_exam"
+            app:destination="@id/nav_detail_exam" />
+        <action
+            android:id="@+id/action_nav_exam_to_nav_exam_result"
+            app:destination="@id/nav_exam_result" />
+        <action
+            android:id="@+id/action_nav_exam_to_nav_watch_history"
+            app:destination="@id/nav_watch_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_study"
+        android:name="com.nguyennhatminh614.motobikedriverlicenseapp.screen.study.StudyFragment"
+        android:label="@string/text_study_fragment_title"
+        tools:layout="@layout/fragment_study">
+        <action
+            android:id="@+id/action_nav_study_to_nav_detail_study"
+            app:destination="@id/nav_detail_study" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tips_high_score"
+        android:name="com.example.applearndriver.app.ui.tiphighscores.TipHighScoreFragment"
+        android:label="@string/text_tips_high_score_fragment_title"
+        tools:layout="@layout/fragment_tip_high_score" />
+
+    <fragment
+        android:id="@+id/nav_wrong_answer"
+        android:name="com.example.applearndriver.app.ui.wronganswer.WrongAnswerFragment"
+        android:label="@string/text_wrong_answer_fragment_title"
+        tools:layout="@layout/fragment_wrong_answer" />
+
+    <fragment
+        android:id="@+id/nav_traffic_sign"
+        android:name="com.example.applearndriver.app.ui.trafficsign.TrafficSignFragment"
+        android:label="@string/text_traffic_sign_fragment_title"
+        tools:layout="@layout/fragment_traffic_sign" >
+        <action
+            android:id="@+id/action_nav_traffic_sign_to_nav_traffic_sign_detail"
+            app:destination="@id/nav_traffic_sign_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_traffic_sign_detail"
+        android:name="com.example.applearndriver.app.ui.trafficsign.DetailTrafficSignFragment"
+        android:label="@string/text_traffic_sign_fragment_title"
+        tools:layout="@layout/fragment_detail_traffic_sign" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.applearndriver.app.ui.settings.SettingsFragment"
+        android:label="@string/text_settings_fragment_title"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_detail_exam"
+        android:name="com.example.applearndriver.app.ui.exam.detail.DetailExamFragment"
+        android:label="@string/text_default_detail_exam"
+        tools:layout="@layout/fragment_detail_exam_layout" />
+
+    <fragment
+        android:id="@+id/nav_detail_study"
+        android:name="com.example.applearndriver.app.ui.study.DetailStudyFragment"
+        android:label="@string/text_temp_nav_detail_study"
+        tools:layout="@layout/fragment_detail_study_layout" />
+    <fragment
+        android:id="@+id/nav_instruction"
+        android:name="com.example.applearndriver.app.ui.instruction.InstructionFragment"
+        android:label="@string/text_temp_nav_instruction"
+        tools:layout="@layout/fragment_instruction"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_change_license_type"
+        android:name="com.example.applearndriver.app.ui.changelicensetype.ChangeLicenseTypeFragment"
+        android:label="@string/text_change_license_type"
+        tools:layout="@layout/fragment_change_license_type_screen"/>
+
+    <fragment
+        android:id="@+id/nav_exam_result"
+        android:label="@string/text_exam_result"
+        android:name="com.example.applearndriver.app.ui.exam.result.ExamResultFragment"
+        tools:layout="@layout/fragment_exam_result">
+        <action
+            android:id="@+id/action_nav_exam_result_to_nav_watch_history"
+            app:destination="@id/nav_watch_history" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_watch_history"
+        android:name="com.example.applearndriver.app.ui.exam.watchhistory.ExamWatchHistoryFragment"
+        android:label="@string/nav_watch_history_title"
+        tools:layout="@layout/fragment_exam_watch_history_layout"/>
 </navigation>

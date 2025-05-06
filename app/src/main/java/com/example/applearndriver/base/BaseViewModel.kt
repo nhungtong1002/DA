@@ -1,16 +1,23 @@
 package com.example.applearndriver.base
 
+import android.content.SharedPreferences
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.applearndriver.utils.extensions.convertSecondToMillisecond
+import com.example.applearndriver.utils.extensions.getCurrentLicenseType
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-open class BaseViewModel : ViewModel() {
+@HiltViewModel
+open class BaseViewModel @Inject constructor(
+    protected val sharedPreferences: SharedPreferences
+) : ViewModel() {
     protected val loading = MutableLiveData<Boolean>(false)
     val isLoading: LiveData<Boolean>
         get() = loading
@@ -28,6 +35,9 @@ open class BaseViewModel : ViewModel() {
         get() = _isVisibleResetButton
 
     private var _timeOutLoadingJob: Job? = null
+
+    val currentLicenseType
+        get() = sharedPreferences.getCurrentLicenseType()
 
     protected fun launchTask(
         onRequest: suspend CoroutineScope.() -> Unit = {},

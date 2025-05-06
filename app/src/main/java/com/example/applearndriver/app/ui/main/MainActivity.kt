@@ -1,33 +1,44 @@
-package com.example.applearndriver.app.ui
+package com.example.applearndriver.app.ui.main
 
 import android.app.AlertDialog
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.applearndriver.R
 import com.example.applearndriver.app.ui.dialog.LoadingDialog
+import com.example.applearndriver.app.ui.exam.ExamViewModel
+import com.example.applearndriver.app.ui.instruction.InstructionViewModel
+import com.example.applearndriver.app.ui.settings.SettingsViewModel
+import com.example.applearndriver.app.ui.study.StudyViewModel
 import com.example.applearndriver.base.BaseActivity
+import com.example.applearndriver.base.BaseViewModel
 import com.example.applearndriver.constant.AppConstant
 import com.example.applearndriver.databinding.ActivityMainBinding
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamViewModel
+import com.example.applearndriver.utils.extensions.showToast
+import com.example.applearndriver.utils.network.ConnectivityObserver
+import com.example.applearndriver.utils.network.InternetConnection
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
-    val baseViewModel by viewModel<BaseViewModel>()
-    val studyViewModel by viewModel<StudyViewModel>()
-    val examViewModel by viewModel<ExamViewModel>()
-    val settingsViewModel by viewModel<SettingsViewModel>()
-    val instructionViewModel by viewModel<InstructionViewModel>()
+    val baseViewModel by viewModels<BaseViewModel>()
+    val studyViewModel by viewModels<StudyViewModel>()
+    val examViewModel by viewModels<ExamViewModel>()
+    val settingsViewModel by viewModels<SettingsViewModel>()
+    val instructionViewModel by viewModels<InstructionViewModel>()
 
-    private val internetConnectionObserver by inject<InternetConnection>()
-
-    val currentLicenseType
-        get() = inject<SharedPreferences>().value.getCurrentLicenseType()
+    private val internetConnectionObserver : InternetConnection by lazy {InternetConnection(this)}
 
     private val notConnectDialog by lazy {
         AlertDialog.Builder(this@MainActivity)
@@ -122,7 +133,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                         navController.navigate(
                             R.id.action_nav_main_to_nav_exam,
                             bundleOf(
-                                AppConstant.KEY_BUNDLE_CURRENT_LICENSE_TYPE to currentLicenseType.type
+                                AppConstant.KEY_BUNDLE_CURRENT_LICENSE_TYPE to baseViewModel.currentLicenseType.type
                             )
                         )
                     }
