@@ -5,7 +5,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Ứng dụng ôn thi GLPX</string>
-    <string name="nav_header_subtitle">Phạm Xuân Hiếu - 2021602316</string>
+    <string name="nav_header_subtitle">Tống Thị Hồng Nhung - 2021601969</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -16,7 +16,7 @@
     <string name="text_exam_fragment_title">Chọn đề thi thử</string>
     <string name="text_study_fragment_title">Học lý thuyết</string>
     <string name="text_tips_high_score_fragment_title">Mẹo thi điểm cao</string>
-    <string name="text_wrong_answer_fragment_title">Các câu hay sai</string>
+    <string name="text_wrong_answer_fragment_title">Các câu làm sai</string>
     <string name="text_traffic_sign_fragment_title">Biển báo giao thông</string>
     <string name="text_settings_fragment_title">Cài đặt</string>
     <string name="text_button_do_exam">Làm bài</string>

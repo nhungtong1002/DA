@@ -88,7 +88,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
     companion object {
         private const val EXAM_CATEGORY = "Thi sát hạch"
         private const val STUDY_CATEGORY = "Học lý thuyết"
-        private const val SIGNAL_CATEGORY = "Biển báo đường bộ"
+        private const val SIGNAL_CATEGORY = "Biển báo giao thông"
         private const val TIPS_HIGH_SCORE_CATEGORY = "Mẹo điểm cao"
         private const val WRONG_ANSWER_CATEGORY = "Các câu làm sai"
         private const val SETTINGS_CATEGORY = "Cài đặt"
