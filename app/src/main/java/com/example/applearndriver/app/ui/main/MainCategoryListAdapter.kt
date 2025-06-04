@@ -28,7 +28,7 @@ class MainCategoryListAdapter :
                 imageCategory.setImageResource(data.resourceID)
                 textCategory.text = data.title
 
-                itemCategory.setOnClickListener {
+                root.setOnClickListener {
                     clickItemInterface?.let { function -> function(data) }
                 }
             }

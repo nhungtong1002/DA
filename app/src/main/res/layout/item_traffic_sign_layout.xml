@@ -8,6 +8,7 @@
     app:cardElevation="@dimen/dp_5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:foreground="?attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

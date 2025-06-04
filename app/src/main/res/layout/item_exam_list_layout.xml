@@ -44,12 +44,12 @@
             android:id="@+id/text_exam_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
             android:fontFamily="@font/comfortaa"
             android:textStyle="bold"
-            tools:text="ĐANG THI"
-            android:layout_marginEnd="@dimen/dp_20"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_exam_title"/>
+            app:layout_constraintTop_toTopOf="@id/text_exam_title"
+            tools:text="ĐANG THI" />
 
         <TextView
             android:id="@+id/text_description"
@@ -71,6 +71,7 @@
             android:layout_marginBottom="@dimen/dp_15"
             android:background="@drawable/bg_corner_5dp_blue_highlight_background"
             android:fontFamily="@font/comfortaa_light"
+            android:foreground="?attr/selectableItemBackground"
             android:minHeight="@dimen/dp_0"
             android:paddingStart="@dimen/dp_20"
             android:paddingTop="@dimen/dp_8"
@@ -92,6 +93,7 @@
             android:layout_marginBottom="@dimen/dp_20"
             android:background="@drawable/bg_corner_5dp_blue_highlight_background"
             android:fontFamily="@font/comfortaa_light"
+            android:foreground="?attr/selectableItemBackground"
             android:minHeight="@dimen/dp_0"
             android:paddingStart="@dimen/dp_20"
             android:paddingTop="@dimen/dp_8"
