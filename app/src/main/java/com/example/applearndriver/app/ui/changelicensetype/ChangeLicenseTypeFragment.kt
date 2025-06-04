@@ -33,7 +33,7 @@ class ChangeLicenseTypeFragment :
     }
 
     override fun bindData() {
-        viewModel.currentLicenseType.observe(viewLifecycleOwner) {
+        viewModel.currentLicenseTypeState.observe(viewLifecycleOwner) {
             changeLicenseTypeAdapter.setCurrentLicenseType(it) { selectedPosition ->
                 viewBinding.recyclerViewLicenseType.scrollToPosition(selectedPosition)
             }

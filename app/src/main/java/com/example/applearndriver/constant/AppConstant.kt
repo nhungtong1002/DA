@@ -5,8 +5,8 @@ object AppConstant {
     const val KEY_BUNDLE_TRAFFIC_SIGN = "TrafficSignBundle"
     const val DEFAULT_NOT_HAVE_TIME_STAMP = -1L
     const val TIME_TASK_DELAYED = 400L
-    const val NEW_QUESTION_COLLECTION = "questions"
-    const val TRAFFIC_SIGN_COLLECTION = "trafficsigns"
+    const val NEW_QUESTION_COLLECTION = "question"
+    const val TRAFFIC_SIGN_COLLECTION = "traffic_sign"
     const val TIPS_HIGH_SCORE_COLLECTION = "tipshighscore"
     const val HAS_SHOW_NOT_CONNECTED_DIALOG_AT_START = "isShowNotConnectedDialog"
     const val NONE_POSITION = -1

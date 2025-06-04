@@ -11,13 +11,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ChangeLicenseTypeViewModel @Inject constructor(
-    private val sharedPreferences: SharedPreferences,
-) : BaseViewModel() {
+    sharedPreferences: SharedPreferences
+) : BaseViewModel(sharedPreferences) {
 
-    private val _currentLicenseType = MutableLiveData<LicenseType>()
+    private val _currentLicenseTypeState = MutableLiveData<LicenseType>()
 
-    val currentLicenseType: LiveData<LicenseType>
-        get() = _currentLicenseType
+    val currentLicenseTypeState: LiveData<LicenseType>
+        get() = _currentLicenseTypeState
 
     init {
         if (sharedPreferences.getString(AppConstant.CURRENT_LICENSE_TYPE, AppConstant.EMPTY_DATA)?.isEmpty() == true) {
@@ -37,6 +37,6 @@ class ChangeLicenseTypeViewModel @Inject constructor(
                 ?: LicenseType.A1.type
 
         val licenseType = enumValues<LicenseType>().first{ it.type == currentLicenseType}
-        _currentLicenseType.postValue(licenseType)
+        _currentLicenseTypeState.postValue(licenseType)
     }
 }

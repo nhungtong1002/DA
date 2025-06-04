@@ -20,10 +20,11 @@ import com.example.applearndriver.data.model.QuestionOptions
 import com.example.applearndriver.databinding.FragmentDetailExamLayoutBinding
 import com.example.applearndriver.utils.interfaces.IBottomSheetListener
 import com.example.applearndriver.utils.interfaces.IResponseListener
-import com.nguyennhatminh614.motobikedriverlicenseapp.screen.exam.ExamViewModel
+import com.example.applearndriver.app.ui.exam.ExamViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-
+@AndroidEntryPoint
 class DetailExamFragment :
     BaseFragment<FragmentDetailExamLayoutBinding>(FragmentDetailExamLayoutBinding::inflate) {
 
