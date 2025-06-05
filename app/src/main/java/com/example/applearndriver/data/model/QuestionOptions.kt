@@ -29,6 +29,15 @@ data class QuestionOptions(
             }
         }
     }
+    fun copy(isSelected: Boolean, position : Int, stateNumber : Int): QuestionOptions {
+        return QuestionOptions(
+            questionsID,
+            position,
+            title,
+            isSelected,
+            stateNumber
+        )
+    }
 }
 
 enum class StateQuestionOption(val type: Int) {

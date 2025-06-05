@@ -177,8 +177,8 @@ class ExamViewModel @Inject constructor(
 
                 exam.currentTimeStamp = END_TIME_STAMP
 
-                exam.listQuestionOptions.forEach {
-                    if (it.position == exam.listQuestions[index].correctAnswerPosition) {
+                exam.listQuestionOptions.forEach { questionOption ->
+                    if (questionOption.position == exam.listQuestions[index].correctAnswerPosition) {
                         exam.listQuestionOptions[index].stateNumber =
                             StateQuestionOption.CORRECT.type
                         exam.numbersOfCorrectAnswer++
@@ -193,10 +193,10 @@ class ExamViewModel @Inject constructor(
                         val questionID = exam.listQuestions[index].id
                         val wrongAnswer =
                             wrongAnswerRepository.findWrongAnswerQuestionByID(questionID)
-
                         if (wrongAnswer != null) {
                             val newWrongAnswerQuestion = wrongAnswer.copy(
-                                lastWrongTime = System.currentTimeMillis()
+                                lastWrongTime = System.currentTimeMillis(),
+                                lastSelectedState = questionOption
                             )
                             wrongAnswerRepository.updateWrongAnswerQuestion(newWrongAnswerQuestion)
                         } else {
